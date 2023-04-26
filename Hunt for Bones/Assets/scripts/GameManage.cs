@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
-public class GameManager3 : MonoBehaviour
+public class GameManage : MonoBehaviour
 {
     public TextMeshProUGUI mensagem, textoContador;
     public int contador;
@@ -31,6 +32,19 @@ public class GameManager3 : MonoBehaviour
 
         //mudar o texto
         textoContador.text = "Moedas: " + contador;
+    }
+
+
+    public void Ganhou()
+    {
+        mensagem.text = "Ganhou";
+        Invoke("ModificarMensagem", 2);
+        Invoke("CarregarFase", 2.01f);
+    }
+
+    void CarregarFase()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 
