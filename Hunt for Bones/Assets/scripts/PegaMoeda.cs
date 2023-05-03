@@ -14,6 +14,7 @@ public class PegaMoeda : MonoBehaviour
         }
         if (col.CompareTag("Osso dourado"))
         {
+            Destroy(col.gameObject);
             Debug.Log("ganhou");
             FindObjectOfType<GameManage>().Ganhou();
         }

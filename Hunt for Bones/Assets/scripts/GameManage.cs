@@ -31,7 +31,7 @@ public class GameManage : MonoBehaviour
         contador += valor;
 
         //mudar o texto
-        textoContador.text = "Moedas: " + contador;
+        textoContador.text = "Ossos: " + contador;
     }
 
 
