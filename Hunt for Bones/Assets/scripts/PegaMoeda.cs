@@ -12,9 +12,9 @@ public class PegaMoeda : MonoBehaviour
             Destroy(col.gameObject);
             FindObjectOfType<GameManage>().AdicionarMoedas(1);
         }
-
-        if (col.CompareTag("Osso Dourado"))
+        if (col.CompareTag("Osso dourado"))
         {
+            Destroy(col.gameObject);
             Debug.Log("ganhou");
             FindObjectOfType<GameManage>().Ganhou();
         }
