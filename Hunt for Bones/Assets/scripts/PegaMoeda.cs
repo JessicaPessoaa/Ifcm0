@@ -7,6 +7,16 @@ public class PegaMoeda : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        throw new NotImplementedException();
+        if (col.CompareTag("Moeda"))
+        {
+            Destroy(col.gameObject);
+            FindObjectOfType<GameManage>().AdicionarMoedas(1);
+        }
+
+        if (col.CompareTag("Osso Dourado"))
+        {
+            Debug.Log("ganhou");
+            FindObjectOfType<GameManage>().Ganhou();
+        }
     }
 }

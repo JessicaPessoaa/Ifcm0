@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 
-public class GameManager3 : MonoBehaviour
+public class GameManage : MonoBehaviour
 {
     public TextMeshProUGUI mensagem, textoContador;
     public int contador;
