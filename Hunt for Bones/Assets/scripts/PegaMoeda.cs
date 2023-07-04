@@ -7,7 +7,7 @@ public class PegaMoeda : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Moeda"))
+        if (col.CompareTag("Osso"))
         {
             Destroy(col.gameObject);
             FindObjectOfType<GameManage>().AdicionarMoedas(1);
